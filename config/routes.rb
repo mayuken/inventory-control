@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resources :foodstuffs
+  root to: 'foodstuffs#index'
+  resources :foodstuffs, only: [:index, :new, :create]
 end

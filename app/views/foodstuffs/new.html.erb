@@ -1,0 +1,70 @@
+<div class="wrapper">
+  <div class="header">
+   <div class="header_left">
+    <h1>食材登録</h1>
+   </div>
+   <div class="header_right">
+    <a href="/">食材一覧</a>
+   </div>
+  </div>
+  <div class="register">
+    <form class="new_register" id="#" action="#" accept-charset="UTF-8" method="post">
+      <input name="utf8" type="hidden" value="✓">
+      <input type="hidden" name="authenticity_token" value="iDiLSh3q/E8ipTm72gbb9jF3I2ELpovwVheu6hjPT1NhZUM6QFLf5wlOrVYJ6EdeCRtDhnW2JiAOlAfI2WwfBQ==">
+      <div class="register_name">
+        <p class="item_name">商品名</p>
+        <div class="register_name-from">
+          <input class="register_name-input" placeholder="" type="text" name="foodstuff[name]" id="foodstuff_name">
+          <div class="register_btn-box">
+            <input type="submit" name="commit" value="登録" class="register_btn" data-disable-with="登録">
+          </div>
+        </div>
+      </div>
+      <div class="register_category">
+        <p class="item_name">商品カテゴリを選択</p>
+        <div class="register_category-from">
+          <fieldset>
+          <input type="text" autocomplete="on" list="category" placeholder="全カテゴリ" class="category_input">
+            <datalist id="category">
+              <option value="生鮮野菜">
+              <option value="小麦粉">
+              <option value="チーズ">
+            </datalist>
+          </fieldset>
+          <p>または　<a id="modal-open" class="button-link">カテゴリ作成</a></p>
+          <%# ここからモータルウィンドウ %>
+          <div id="modal-content">
+            <p>「閉じる」か「背景」をクリックするとモーダルウィンドウを終了します。</p>
+            <p><a id="modal-close" class="button-link">閉じる</a></p>
+          </div>
+          <%# ここまでモータルウィンドウ %>
+        </div>
+
+      </div>
+      <div class="register_image">
+        <p class="item_name">商品画像</p>
+        <div class="register_image-from">
+          <input class="register_image-input" placeholder="" type="text" name="foodstuff[image]" id="foodstuff_image">
+        </div>
+      </div>
+      <div class="register_price">
+        <p class="item_name">価格</p>
+        <div class="register_price-from">
+          <input class="register_price-input" placeholder="" type="text" name="foodstuff[price]" id="foodstuff_price">
+        </div>
+      </div>
+      <div class="register_quantity">
+        <p class="item_name">在庫</p>
+        <div class="register_quantity-from">
+          <input class="register_quantity-input" placeholder="" type="text" name="foodstuff[quantity]" id="foodstuff_quantity">
+        </div>
+      </div>
+      <div class="register_capacity">
+        <p class="item_name">内容量</p>
+        <div class="register_capacity-from">
+          <input class="register_capacity-input" placeholder="" type="text" name="foodstuff[capacity]" id="foodstuff_capacity">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
