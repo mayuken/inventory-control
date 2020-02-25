@@ -38,7 +38,11 @@
     <% @foodstuffs.each do |foodstuff| %>
       <div class="inventory_list">
         <div class="vxe-cell vxe-col_1"><%= foodstuff.id %></div>
-        <div class="vxe-cell vxe-col_2" >商品画像</div>
+        <div class="vxe-cell vxe-col_2"><% if foodstuff.image.file.nil? %>
+                                          <%= "Not images"  %>
+                                        <% else %>
+                                          <%= image_tag "#{foodstuff.image}" %>
+                                        <% end %></div>
         <div class="vxe-cell vxe-col_3"><%= foodstuff.category.name %></div>
         <div class="vxe-cell vxe-col_4"><%= foodstuff.name %></div>
         <div class="vxe-cell vxe-col_5"><%= foodstuff.price %></div>

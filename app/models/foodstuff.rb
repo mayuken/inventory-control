@@ -9,4 +9,5 @@ class Foodstuff < ApplicationRecord
   belongs_to :category 
   accepts_nested_attributes_for :category
   
+  mount_uploader :image, ImageUploader
 end

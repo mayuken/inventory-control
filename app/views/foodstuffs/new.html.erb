@@ -31,7 +31,7 @@
           <%# <input type="text" autocomplete="on" list="category" placeholder="全カテゴリ" class="category_input"> %>
             <datalist id="category">
               <% @categories.each do |category| %>
-              <option value="<%= category.name %>">
+              <option value="<%= category.id %>">
               <% end %>
             </datalist>
           </fieldset>
@@ -45,7 +45,7 @@
         <div class="register_form">
           <p class="item_name">商品画像</p>
           <div class="register_image-form">
-            <%= form.file_field :image, accept:"image/*", class:"register_image-input", id:"foodstuff_image"%>
+            <%= form.file_field :image, class:"register_image-input", id:"foodstuff_image"%>
             <%# <input class="register_image-input" placeholder="" type="file" accept="image/*" name="foodstuff[image]" id="foodstuff_image"> %>
           </div>
         </div>
