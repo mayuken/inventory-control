@@ -68,3 +68,5 @@ end
   gem 'jquery-rails'
   gem 'jquery-ui-rails'
   gem 'pry-rails'
+  gem 'carrierwave'
+  gem 'mini_magick'
