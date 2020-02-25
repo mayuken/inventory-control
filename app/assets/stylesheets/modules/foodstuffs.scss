@@ -105,12 +105,27 @@
 
 .vxe-cell {
   // display: table-cell;
-  padding: 5px 10px;
+  width: 12%;
+  text-align: center;
+  height: auto;
+  // line-height: ;
 }
 
 .inventory_list {
   color: #606266;
   font-family: fantasy;
   display: flex;
-  justify-content: space-evenly;
+  // justify-content: space-around;
+}
+
+.vxe-col_1 {
+  margin-left: 20px;
+}
+
+.vxe-col_3 {
+  margin-left: 30px;
+}
+
+.vxe-col_4 {
+  margin-left: 30px;
 }
