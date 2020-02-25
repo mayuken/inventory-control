@@ -7,28 +7,47 @@
 }
 
 .item_name {
-
+  margin-bottom: 10px;
 }
 
 
-.register_name {
+.register_form {
   height: 80px;
+  margin-bottom: 30px;
+  margin-right: 100px;
 }
 
-.register_name-from{
+.register_form-left {
+  margin-right: 228px;
+}
+
+.register_name-form{
   display: flex;
   justify-content: space-between;
 }
 
 .register_name-input {
-  width: 200px;
+  width: 50vw;
+  height: 40px;
 }
 
-.register_category-from {
+.register_btn {
+  padding: 15px 40px;
+  font-size: 1.2em;
+  background-color: #db7f00;
+  color: #fff;
+  border-style: none;
+  
+}
+
+.register_form-flex {
   display: flex;
 }
 
 
+.category-modal {
+  margin-left: 80px;
+}
 
 // 以下モーダルウィンドウ
 
