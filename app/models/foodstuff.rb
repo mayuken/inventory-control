@@ -1,7 +1,7 @@
 class Foodstuff < ApplicationRecord
 
   with_options presence: true do
-    validates :name
+    validates :name, uniqueness: true
     validates :price
     validates :quantity
   end
