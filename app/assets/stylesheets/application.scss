@@ -2,3 +2,17 @@
 @import "modules/foodstuffs.scss";
 @import "modules/categories.scss";
 @import " font-awesome ";
+
+
+
+.notifications {
+  color: white;
+  text-align: center;  
+}
+.notice {
+  background-color: lightBlue;
+}
+
+.alert {
+  background-color: orange;
+}

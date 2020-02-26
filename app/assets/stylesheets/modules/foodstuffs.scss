@@ -78,7 +78,7 @@
 }
 
 .category_input {
-  width: 100%;
+  width: 200px;
   height: 40px;
   line-height: 40px;
   -webkit-appearance: textfield;
@@ -91,6 +91,7 @@
   height: 100vh;
   background-color: white;
   margin: 0 auto;
+  overflow: scroll;
 }
 
 .inventory_header {
@@ -129,3 +130,9 @@
 .vxe-col_4 {
   margin-left: 30px;
 }
+
+.vxe-col_9 a {
+  text-decoration: none;
+  color: #28536C;
+}
+

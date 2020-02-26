@@ -26,15 +26,7 @@
       <div class="register_form">
         <p class="item_name">商品カテゴリを選択</p>
         <div class="register_form-flex">
-          <fieldset>
-          <%= form.text_field :category_id, list:"category", autocomplete:"on", class:"category_input", placeholder:"カテゴリ選択" %>
-          <%# <input type="text" autocomplete="on" list="category" placeholder="全カテゴリ" class="category_input"> %>
-            <datalist id="category">
-              <% @categories.each do |category| %>
-              <option value="<%= category.id %>">
-              <% end %>
-            </datalist>
-          </fieldset>
+          <%= form.collection_select :category_id, @parents, :id, :name,{prompt: "---"}, class: "category_input"%>
           <p class="category-modal">または　<a id="modal-open" class="button-link">カテゴリ作成</a></p>
           <%# ここからモータルウィンドウ %>
           
@@ -85,3 +77,5 @@
     <% end %>
   </div>
 </div>
+
+
