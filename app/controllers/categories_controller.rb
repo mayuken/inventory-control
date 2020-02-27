@@ -6,5 +6,23 @@ class CategoriesController < ApplicationController
 
   def create
   end
+
+  def category_create_edit
+    @category_id = Foodstuff.find(params[:id])
+    @category = Category.new(category_params_edit)
+    if @category.save
+      flash[:notice] = "カテゴリーが追加されました！"
+      redirect_to edit_foodstuff_path(@category_id)
+    else
+      flash[:alert] = "カテゴリー追加に失敗しました…。"
+      redirect_to edit_foodstuff_path(@category_id)
+    end
+  end
+
+  private
+
+  def category_params_edit
+    params.require(:category).permit(:name)
+  end
   
 end
