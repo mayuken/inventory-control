@@ -33,12 +33,25 @@ class FoodstuffsController < ApplicationController
       flash[:alert] = "カテゴリー追加に失敗しました…。"
       redirect_to new_foodstuff_path
     end
-    
   end
 
   def edit
+    @foodstuff = Foodstuff.find(params[:id])
+    @categories = Category.all
+    @category = Category.find(params[:id])
+    @parents = Category.all.order("id ASC")
   end
 
+  def update
+    @foodstuff = Foodstuff.find(params[:id])
+    if @foodstuff.update(foodstuff_params)
+      flash[:notice] = "登録内容が変更されました！"
+      redirect_to root_path
+    else
+      flash[:alert] = "登録内容変更に失敗しました…。"
+      render :edit
+    end
+  end
 
   private
 
@@ -49,5 +62,6 @@ class FoodstuffsController < ApplicationController
   def category_params
     params.require(:category).permit(:name)
   end
+
 
 end

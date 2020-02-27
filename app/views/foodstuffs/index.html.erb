@@ -49,7 +49,7 @@
         <div class="vxe-cell vxe-col_6"><%= foodstuff.quantity %></div>
         <div class="vxe-cell vxe-col_7"><%= foodstuff.capacity %></div>
         <div class="vxe-cell vxe-col_8"><%= foodstuff.updated_at.strftime("%Y-%m-%d") %></div>
-        <div class="vxe-col_9"><a href="/foodstuffs/new"><i class="fas fa-edit fa-lg"></i></a></div>
+        <div class="vxe-col_9"><a class="fas fa-edit fa-lg" href="/foodstuffs/<%= foodstuff.id%>/edit"></a></div>
       </div>
     <% end %>
   </div>
