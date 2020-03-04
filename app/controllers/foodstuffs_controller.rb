@@ -53,6 +53,15 @@ class FoodstuffsController < ApplicationController
     end
   end
 
+  def destroy_all
+    checked_data = params[:deletes].keys # ここでcheckされたデータを受け取っています。
+    if Foodstuff.destroy(checked_data)
+      redirect_to root_path
+    else
+      render :index
+    end
+  end
+
   private
 
   def foodstuff_params

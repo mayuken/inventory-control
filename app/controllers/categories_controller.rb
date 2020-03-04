@@ -19,6 +19,16 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def category_destroy
+    checked_data = params[:deletes].keys # ここでcheckされたデータを受け取っています。
+    if Category.destroy(checked_data)
+      redirect_to root_path
+    else
+      render :index
+    end
+  end
+
+
   private
 
   def category_params_edit
