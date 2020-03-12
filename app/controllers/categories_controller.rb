@@ -24,7 +24,7 @@ class CategoriesController < ApplicationController
     if Category.destroy(checked_data)
       redirect_to root_path
     else
-      render :index
+      redirect_to root_path
     end
   end
 

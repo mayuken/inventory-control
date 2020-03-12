@@ -56,6 +56,7 @@ class FoodstuffsController < ApplicationController
   def destroy_all
     checked_data = params[:deletes].keys # ここでcheckされたデータを受け取っています。
     if Foodstuff.destroy(checked_data)
+      flash[:notice] = "選択項目が削除されました！"
       redirect_to root_path
     else
       render :index

@@ -58,3 +58,9 @@ $(function(){
   // $('#new_category-btn').click(function() { $('#new_category').submit(); });
 
 });
+
+$(function(){
+  $('input[name="deletes[]"]').change(function() {
+    console.log("ok");
+  });
+});

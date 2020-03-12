@@ -38,7 +38,7 @@
       <%= form_with model:@foodstuffs, url: destroy_all_foodstuffs_path, local: true do |form| %>
       <% @foodstuffs.each_with_index do |foodstuff,index| %>
         <div class="inventory_list">
-          <%= check_box_tag "deletes[#{ foodstuff.id }]", foodstuff.id %>
+          <%= check_box_tag "deletes[#{ foodstuff.id }]", foodstuff.id%>
           <div class="vxe-cell vxe-col_1"><%= index + 1 %></div>
           <div class="vxe-cell vxe-col_2"><% if foodstuff.image.file.nil? %>
                                             <%= "Not images"  %>
