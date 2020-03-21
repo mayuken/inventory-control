@@ -1,0 +1,46 @@
+.wrapper
+  .header
+    .header_left
+      %h1 食材登録
+    .header_right
+      %a{:href => "/"} 食材一覧
+  .register
+    = form_with model: @foodstuff, local: true do |form|
+      .register_form
+        %p.item_name 商品名
+        .register_name-form
+          = form.text_field :name, class:"register_name-input", id:"foodstuff_name", placeholder:""
+          .register_btn-box
+            = form.submit '登録',class:"register_btn"
+      .register_form
+        %p.item_name 商品カテゴリを選択
+        .register_form-flex
+          = form.collection_select :category_id, @parents, :id, :name,{prompt: "---"}, class: "category_input"
+          %p.category-modal
+            または　
+            %a#modal-open.button-link カテゴリ作成
+      .register_form-flex
+        .register_form
+          %p.item_name 商品画像
+          .register_image-form
+            = form.file_field :image, class:"register_image-input", id:"foodstuff_image"
+        .register_form-right
+          %p.item_name 価格（税込）
+          .register_price-form
+            = form.text_field :price, class:"register_price-input", id:"foodstuff_pricve"
+      .register_form-flex
+        .register_form-left
+          %p.item_name 在庫
+          .register_quantity-from
+            = form.text_field :quantity, class:"register_quantity-input", id:"foodstuff_quantity"
+        .register_form-right
+          %p.item_name 内容量（kg）
+          .register_capacity-form
+            = form.text_field :capacity, class:"register_capacity-input", id:"foodstuff_capacity"
+    = form_with model: @category, url: category_create_foodstuffs_path, local: true do |form|
+      #modal-content
+        %p 追加したいカテゴリを入力してください。
+        = form.text_field :name, class:"new_category", id:"new_category",placeholder:"カテゴリ名入力"
+        = form.submit '追加',class:"new_category-btn", id:"new_category-btn"
+        %p
+          %a#modal-close.button-link 閉じる

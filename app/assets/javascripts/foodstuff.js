@@ -60,7 +60,18 @@ $(function(){
 });
 
 $(function(){
-  $('input[name="deletes[]"]').change(function() {
-    console.log("ok");
+  $('#delete_btn').remove();
+  $('input[type="checkbox"]').change(function() {
+    var checkbox = $('input:checked'); // チェックボックス要素をすべて取得する
+    var cnt = checkbox.length; // チェックボックスの個数を取得する
+    var html = `<input type = "submit" value = "選択項目を削除" id = "delete_btn" class = "delete_btn"></form>`
+    if (cnt == 0){
+      $('#delete_btn').remove();
+    }else{
+      if ($('#delete_btn').length){
+      }else{
+        $('.delete').append(html);
+      }
+    }
   });
 });
