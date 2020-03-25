@@ -64,7 +64,7 @@ $(function(){
   $('input[type="checkbox"]').change(function() {
     var checkbox = $('input:checked'); // チェックボックス要素をすべて取得する
     var cnt = checkbox.length; // チェックボックスの個数を取得する
-    var html = `<input type = "submit" value = "選択項目を削除" id = "delete_btn" class = "delete_btn"></form>`
+    var html = `<input type = "submit" value = "選択項目を削除" id = "delete_btn" class = "delete_btn">`
     if (cnt == 0){
       $('#delete_btn').remove();
     }else{
