@@ -1,24 +1,5 @@
-# README
+# 在庫管理（自動発注）システム
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 制作背景
+ 前職（飲食）での、在庫管理、発注業務の非効率さを自動化できる様なシステムがあったら、もっと人の手で行うべきこと（マネジメント、サービス）にもっと目を向けられる【余裕】が生まれるのではないかという想いから制作しました。
+ 機能としてはまだまだ未実装ではありますが、今後の実装目標としては、日常的に使用される在庫をシステムに自動的にカウントさせ、その後ある一定の期間（１週間、１ヶ月）を在庫事に設定し、その期間ごとの在庫の消費量を自動計算ののち、消費した分の発注を自動で行える様なシステムにしていこうと考えております。
