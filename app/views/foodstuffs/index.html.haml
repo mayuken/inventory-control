@@ -14,33 +14,36 @@
           %datalist#category
             - @categories.each do |category|
               %option{:value => "#{category.name}"}
-  .inventory
-    .inventory_header
-      .cell.col_1 商品ID
-      .cell.col_2 商品画像
-      .cell.col_3 カテゴリ
-      .cell.col_4 商品名
-      .cell.col_5 価格
-      .cell.col_6 在庫
-      .cell.col_7 内容量(kg)
-      .cell.col_8 最終更新日
+  %table.inventory{:border => "1"}
+    %tr.inventory_header
+      %th.cell_btn
+      %th.cell.col_1 商品ID
+      %th.cell.col_2 商品画像
+      %th.cell.col_3 カテゴリ
+      %th.cell.col_4 商品名
+      %th.cell.col_5 価格
+      %th.cell.col_6 在庫
+      %th.cell.col_7 内容量(kg)
+      %th.cell.col_8 最終更新日
+      %th.cell_btn
     = form_with model:@foodstuffs, url: destroy_all_foodstuffs_path, local: true do |form|
       - @foodstuffs.each_with_index do |foodstuff,index|
-        .inventory_list
-          = check_box_tag "deletes[#{ foodstuff.id }]", foodstuff.id
-          .vxe-cell.vxe-col_1= index + 1
-          .vxe-cell.vxe-col_2
+        %tr.inventory_list
+          %th.check_btn
+            = check_box_tag "deletes[#{ foodstuff.id }]", foodstuff.id
+          %th.vxe-cell.vxe-col_1= index + 1
+          %th.vxe-cell.vxe-col_2
             - if foodstuff.image.file.nil?
               = "Not images"
             - else
-              = image_tag "#{foodstuff.image}"
-          .vxe-cell.vxe-col_3= foodstuff.category.name
-          .vxe-cell.vxe-col_4= foodstuff.name
-          .vxe-cell.vxe-col_5= foodstuff.price
-          .vxe-cell.vxe-col_6= foodstuff.quantity
-          .vxe-cell.vxe-col_7= foodstuff.capacity
-          .vxe-cell.vxe-col_8= foodstuff.updated_at.strftime("%Y-%m-%d")
-          .vxe-col_9
+              = image_tag "#{foodstuff.image}", size: "100x100"
+          %th.vxe-cell.vxe-col_3= foodstuff.category.name
+          %th.vxe-cell.vxe-col_4= foodstuff.name
+          %th.vxe-cell.vxe-col_5= foodstuff.price
+          %th.vxe-cell.vxe-col_6= foodstuff.quantity
+          %th.vxe-cell.vxe-col_7= foodstuff.capacity
+          %th.vxe-cell.vxe-col_8= foodstuff.updated_at.strftime("%Y-%m-%d")
+          %th.vxe-col_9
             %a.fas.fa-edit.fa-lg{:href => "/foodstuffs/#{foodstuff.id}/edit"}
       .delete
         = form.submit '選択項目を削除', id:"delete_btn", class:"delete_btn"
