@@ -12,6 +12,11 @@
 
 ## DEMO
 
+
+## 使用技術
+
+HTML,SCSS,jQuery,Ruby,Rails,MySQL,AWS
+
 ## To be implemented（実装予定）
  ・UIの向上を図るためフロントサイドの調整  
    
