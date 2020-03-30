@@ -1,7 +1,10 @@
 # Inventory control（在庫管理・自動発注システム）
   
   
-    
+
+## URL
+  https://inventory--control.herokuapp.com/
+  
 ## Production background（制作背景）
  前職（飲食）での、在庫管理、発注業務の非効率さを自動化できる様なシステムがあったら、  
  もっと人の手で行うべきこと（マネジメント、サービス）に目を向けられる【余裕】が生まれるのではないかという想いから制作しました。  
